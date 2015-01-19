@@ -18,7 +18,7 @@ import java.util.Arrays;
 public class MergeIntoArray {
 
 	public static void main(String[] args) {
-		int[] a = { 1, 12, 13, 14, 15, 0, 0, 0, 0, 0 };
+		int[] a = { 1, 12, 13, 14, 15, 0, 0, 0, 0 };
 		int[] b = { 6, 6, 6, 6 };
 		mergeArrays(a, b);
 	}
@@ -53,8 +53,7 @@ public class MergeIntoArray {
 			while (j >= 0) {
 				a[ptr--] = b[j--];
 			}
-		}
-		if (a[0] > b[0]) {
+		} else if (a[0] > b[0]) {
 			a[0] = b[0];
 		}
 		System.out.println(Arrays.toString(a));
